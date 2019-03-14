@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jino</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Suka</h1>
+
+    <template>
+        <div id="full">
+            <full-page>
+                <div class="section">
+                    <button @click="$refs.fullpage.api.moveSectionDown()">
+                        <div id="app">
+                            {{ message }}
+                        </div>
+                    </button>
+                    Section 1
+                </div>
+                <div class="section">
+                    <button @click="$refs.fullpage.api.moveSectionUp()">
+                        Prev
+                    </button>
+                    Section 2
+                </div>
+            </full-page>
+        </div>
+    </template>
+
+    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
